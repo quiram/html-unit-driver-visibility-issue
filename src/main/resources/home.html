@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+        .hidden {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<button onclick="swap()">Show / Hide</button>
+<p id="my-text">text</p>
+
+<script>
+function toggleClass(node, className) {
+  if (node.className.indexOf(className) > 0) {
+    node.className = node.className.replace(' ' + className, '');
+  } else {
+    node.className += ' ' + className;
+  }
+};
+
+function swap() {
+  var text = document.getElementById("my-text");
+  toggleClass(text, "hidden");
+}
+
+</script>
+</body>
+</html>
